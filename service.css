@@ -1,0 +1,260 @@
+.service1{
+    width: 100%;
+    min-height: 100vh;
+    background-color:white;
+}
+.parent{
+    background-color:coral;
+    width: 100%;
+    height: 100vh;
+    
+    position: relative;
+    
+    
+}
+.parent h1{
+    padding-top: 20px;
+}
+.white{
+background-color: white;
+width: 35%;
+height: 100%;
+text-align: center;
+
+}
+.white h1{
+    text-transform: uppercase;
+    font-size: 30px;
+    color: coral;
+}
+.parentcard{
+    width: 80%;
+    height: 80%;
+    background-color: transparent;
+    position: absolute;
+    left: 9em;
+    top: 7em;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.591);
+    border-radius: 10px;
+}
+.cardcontainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.partA{
+    background-color: coral;
+    width: 25%;
+    min-height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: flex;
+    padding-top: 2em;
+    align-items: center;
+    flex-direction: column;
+}
+.paertB{
+    width: 100%;
+    background-color: white;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    text-align: start;
+    padding-left: 3em;
+    font-family: 'Poppins';
+    color: coral;
+    
+    
+}
+.paertB h1{
+    text-transform: lowercase;
+    font-family: 'Poppins';
+    font-size: 45px;
+    letter-spacing: 2px;
+    color: coral;
+    position: relative;
+}
+.clickhear{
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+    padding: 3px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.475);
+    transition: .5s ease-in-out;
+    
+}
+.clickhear:hover{
+    transform: translateY(-7px);
+}
+
+.clickhear p {
+   
+    text-align: center;
+    color: rgb(244, 241, 241);
+    font-size: 10px;
+}
+.paertB a{
+    text-decoration: none;
+}
+.paertB h5{
+    padding-top: 15px;
+    font-weight: 800;
+}
+.paertB p{
+    padding-top: 3px;
+    font-weight: 400;
+    font-family: 'Poppins',sans-serif;
+    font-size: 13px;
+}
+
+/* service image */
+.serviceImage{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    
+    top: 1.5em;
+    right: 4em;
+    border-radius: 50%;
+}
+.serviceImage img{
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+/* servicenav */
+.partA .servicenav ul a li{
+    color: white;
+    font-size: 20px;
+    padding-bottom: 2em;
+}
+.partA .servicenav ul a li:hover{
+    color: goldenrod;
+
+}
+.servicenav{
+    text-align: start;
+}
+.partAHeading{
+    text-transform: uppercase;
+    color: white;
+    padding-bottom: .3em;
+
+}
+hr{
+    width: 80%;
+    background-color: white;
+}
+
+
+
+/* navbar */
+
+nav{
+    background:white;
+}
+nav ul li a{
+    text-shadow: none;
+    color: rgba(255, 127, 80, 0.909);
+
+}
+nav ul li a:hover{
+    color: coral;
+}
+nav ul li a:hover::after{
+    background-color: coral;
+}
+nav img{
+    background-color: black;
+}
+nav button{
+    border: 2px solid coral;
+}
+
+/* end of nav bar */
+
+/* service card responsive  */
+
+@media (max-width: 800px){
+
+    
+      
+      
+    .white{
+        width: 100%;
+        
+    }
+    .serviceImage{
+        width: 250px;
+        height: 250px;
+        right: 1em;
+        top: 1em;
+    }
+    .parentcard{
+       min-height:  60%;
+       max-height: 65%;
+        left: 3em;
+    }
+    .paertB p{
+        font-size: 10px;
+    }
+    .paertB h1{
+        font-size: 20px;
+    }
+    .paertB h5{
+        padding-top: 50px;
+    }
+    .clickhear{
+        width: 50px;
+        height: 50px;
+    }
+    .clickhear p{
+        font-size: 6px;
+    }
+    p{
+        font-size: 10px;
+    }
+    
+
+}
+@media (max-width: 600px) {
+    
+    .serviceImage{
+        display: none;
+    }
+    .paertB h1{
+        text-align: center;
+        line-break: normal;
+    }
+   
+
+  }
+  @media (max-width: 1000px){
+    .partA{
+        display: none;
+    }
+
+
+  }
+
+  @media (min-width:802px) and (max-width:1200px) {
+    .serviceImage{
+        width: 300px;
+        height: 300px;
+        right: 1em;
+    }
+    .socials i {
+        font-size: 15px;
+    }
+    .paertB h1{
+        font-size: 2em;
+    }
+    
+  }
+
+

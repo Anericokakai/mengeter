@@ -1,0 +1,101 @@
+#pricing{
+    width: 100%;
+min-height: 100vh;
+}
+
+.pricecontainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 6em;
+}
+.pricecard{
+    width: 250px;
+    height: 450px;
+    background-color:whitesmoke;
+    display: block;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.468);
+    margin-right: 20px;
+    margin-bottom: 3em;
+}
+.top{
+    width: 100%;
+    height: 35%;
+    background-color:coral;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+    padding-top: 0;
+    
+}
+.top div{
+
+background: #e0e0e0;
+box-shadow: inset 14px 14px 28px #9d9d9d,
+            inset -14px -14px 28px #ffffff;
+    height: 40px;
+    padding:  3px 30px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  text-transform: uppercase;
+
+}
+
+.pricetag{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    position: absolute;
+    top: 24%;
+    left: 30%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:2px solid coral;
+}
+.bottom{
+    padding-top: 3.9em;
+    text-align: center;
+}
+
+.purchase{
+    position: absolute;
+    bottom: 4%;
+    left: 34%;
+    padding: 3px 20px;
+    padding-bottom: 4px;
+    cursor: pointer;
+    border: 2px solid coral;
+    border-radius: 7px;
+    background:coral;
+}
+.span{
+    font-size: 20px;
+}
+
+
+/* navigations styling */
+nav{
+    background:white;
+}
+nav ul li a{
+    text-shadow: none;
+    color: rgba(255, 127, 80, 0.909);
+
+}
+nav ul li a:hover{
+    color: coral;
+}
+nav ul li a:hover::after{
+    background-color: coral;
+}
+nav img{
+    background-color: black;
+}
+nav button{
+    border: 2px solid coral;
+}
