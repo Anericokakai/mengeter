@@ -5,6 +5,12 @@
   font-family: "Oswald", sans-serif;
   list-style: none;
 }
+
+  @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Comfortaa:wght@300;600&family=Montserrat:ital,wght@0,300;0,400;0,600;1,300;1,400;1,500;1,600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Roboto:ital,wght@0,300;0,400;0,700;1,100&family=Saira:ital,wght@0,300;0,500;0,600;0,700;0,800;1,100;1,500;1,700;1,800&family=Sofia+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Titillium+Web:ital,wght@0,400;0,600;0,700;1,300;1,400;1,600&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
 a {
   text-decoration: none;
 }
@@ -20,130 +26,107 @@ a {
   background-repeat: no-repeat;
 }
 
-/* navigation bar */
+/*start  navigation bar */
 
 nav{
   display: flex;
-  align-items: center;
+  padding: 10px 40px;
   justify-content: space-between;
-  padding: 0 40px;
-  height: 70px;
+  background-color: #272727;
   
-
+  
+}
+.logo{
+  color: white;
+  font-size: 25px;
 }
 nav ul{
   display: flex;
 }
 nav ul li{
-  padding: 0 60px;
+  padding: 0 20px;
   font-size: 20px;
-  
 }
 nav ul li a{
-  color: #dddd;
-  text-shadow: 2px 2px 3px black;
-  transition: .5s ease-in;
+  color: aliceblue;
   position: relative;
-  padding-bottom: 3px;
-}
-nav ul li a:hover{
-  color: gold;
 }
 nav ul li a::after{
-  content: '';
-  background: goldenrod;
+  content: "";
   position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 3px;
   width: 100%;
+  height: 3px;
+  background-color: gold;
+  bottom: 0%;
+  left: 0;
   transform: scaleX(0);
-  transition: .5s ease-in;
+  transition: .3s ease-in-out;
 
 }
-
 nav ul li a:hover::after{
   transform: scaleX(1);
-
-  
+}
+.fa-xmark{
+  visibility: hidden;
+}
+.fa-bars{
+  visibility: hidden;
 }
 
-.logo img{
-  width: 30%;
+/*start  navigation bar */
+
+/*start  small screen design */
+
+@media (max-width:800px){
+nav ul{
+  display: block;
+  position: absolute;
+  background-color: #272727;
+  width: 60%;
+right: 0;
+height: 100vh;
+z-index: 3;
+transform:scaleX(0);
+transition: .3s;
 }
-nav .fa-solid {
-  color: gold;
-  display: none;
-  z-index: 10;
+nav ul li{
+  display: flex;
+  justify-content: center;
+  padding-top: 3em;
 }
-
-@media (max-width:800px) {
-  
-  
-  nav ul{
-    display: block;
-    position: absolute;
-    background-color: #272727;
-    right: 0;
-    top: 0;
-    width: 70%;
-    height: 80%;
-    z-index: 15;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    transform: scaleX(0);
-    transition: .5s ease;
-     
-    
-  
-  }
-  nav ul.menu{
-    transform: scaleX(1);
-  }
-  nav ul li{
-    z-index: 20;
-    padding-top: 60px;
-    text-align: center;
-    
-  }
-  nav .fa-solid {
-  
-    display: block;
-    font-size: 25px;
-  }
-  .fa-xmark{
-    padding: 20px;
-  }
-
-  
-
+.fa-xmark{
+  padding-left: 2em;
+  color: aliceblue;
+  font-size: 20px;
+  cursor: pointer;
+  visibility: visible;
+}
+.fa-bars{
+  color: lavenderblush;
+  font-size: 20PX;
+  cursor: pointer;
+  visibility: visible;
+}
+.menu{
+  transform: scaleX(1);
+}
 
 
 
 }
 
-@media (max-width:400Px) {
-  nav ul {
-    width: 100%;
-    border-radius: none;
-  }
-  
-}
 
-/* scroll effect posible  */
-@media (min-width:800px) {
-  nav{
-  
-      background-color: #333;
-      position: fixed;
-    top: 0;
-      width: 100%;
-      z-index: 4;
-      transition: top 0.3s;
-  
-  }
-  
-}
+
+
+
+
+/*end  small screen design */
+
+
+
+
+
+
 
 
 /* end of navigation bar */
@@ -320,7 +303,7 @@ nav .fa-solid {
   width: 100%;
   min-height: 60vh;
   background: linear-gradient(rgba(0, 0, 0, 0.721), rgba(0, 0, 0, 0.89)),
-    url(./images/footer.jpg);
+    url(./images/footer2.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -405,27 +388,32 @@ hr {
 }
 
 
-
-
-nav ul li a{
-  padding: 3px 5px;
-}
-/* active status buckground */
-nav ul li a.back{
-  border: 2px solid coral;
-  padding: 3px 10px;
-  border-radius: 5px;
-  width: max-content;
-}
-
-
-/* reducing padding and font of the nav */
-@media (min-width:801px) and (max-width:1200px) {
+@media (max-width:400px) {
   nav ul li{
-    padding: 0 20px;
+    font-size: 18px;
   }
-  nav{
-    padding: 0 2px;
+  .logo{
+    font-size: 18px;
+  }
+  .paertB{
+    padding-left: 0;
   }
   
 }
+small{
+  width: 100%;
+  
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+left: 50%;}
+.copyright{
+  text-align: center;
+}
+small i{
+  margin-right: 5px;
+}
+
+
+
+
+/* reducing padding and font of the nav */

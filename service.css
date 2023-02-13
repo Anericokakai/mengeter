@@ -29,17 +29,19 @@ text-align: center;
 }
 .parentcard{
     width: 80%;
-    height: 80%;
+    min-height: 600px;
+    
     background-color: transparent;
     position: absolute;
     left: 9em;
     top: 7em;
-    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.591);
+    box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.491);
     border-radius: 10px;
 }
 .cardcontainer{
     width: 100%;
     height: 100%;
+    min-height: 400px;
     display: flex;
 }
 .partA{
@@ -87,6 +89,9 @@ text-align: center;
     transition: .5s ease-in-out;
     
 }
+.servicelogo{
+    color: coral;
+}
 .clickhear:hover{
     transform: translateY(-7px);
 }
@@ -125,7 +130,9 @@ text-align: center;
     width: 100%;
     border-radius: 50%;
 }
-
+.logo{
+    color: coral;
+}
 
 /* servicenav */
 .partA .servicenav ul a li{
@@ -175,15 +182,46 @@ nav img{
 nav button{
     border: 2px solid coral;
 }
+.servicelogo{
+    color: coral;
+}
 
 /* end of nav bar */
 
 /* service card responsive  */
+@media (min-width:800px) {
+    .parentcard{
+        box-shadow: none;
+    }
+    
+}
 
 @media (max-width: 800px){
 
+    .clickhear,.parentcard{
+        box-shadow: none;
+    }
+    .parentcard{
+        background-color: azure;
+    }
+    .paertB{
+        background-color: azure;
+    }
+   
     
-      
+    .fa-xmark{
+        margin-top: 1em;
+        font-size: 25px;
+        color: coral;
+    }
+    .fa-bars{
+        color: coral;
+    }
+    nav ul {
+        height: 100vh;
+        top: 0;
+    }
+
       
     .white{
         width: 100%;
@@ -231,13 +269,14 @@ nav button{
         text-align: center;
         line-break: normal;
     }
-   
+  
 
   }
   @media (max-width: 1000px){
     .partA{
         display: none;
     }
+   
 
 
   }
@@ -258,3 +297,12 @@ nav button{
   }
 
 
+  @media (max-width:400px) {
+  
+    .paertB{
+      padding-left: 0;
+      margin-right: 2em;
+    }
+    
+  }
+  
